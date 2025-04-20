@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | EcoShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <h2>Login to EcoShop</h2>
+    <form onsubmit="login(event)">
+      <input type="text" id="email" placeholder="Email" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <footer class="footer">
+    <p> An E-com Website By Team "The Debuggers"</p>
+    <p> (Creators: Anushka Deshmukh , Saish Kulkarni , Abhishek Pagare) </p>
+  </footer>
+  <script>
+    function login(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      sessionStorage.setItem('user', email.split('@')[0]);
+      alert("Login successful!");
+      window.location.href = "index.html";
+    }
+    function logout() {
+      sessionStorage.clear();
+    }
+  </script>
+
+</body>
+</html>

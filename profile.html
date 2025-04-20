@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+  <div class="profile-container">
+    <h2>Welcome, <span id="user-name"></span></h2>
+    <p>Total Carbon Footprint from Orders: <span id="total-carbon">0</span> kg CO2</p>
+
+    <!-- ✅ Back to Shop Button -->
+    <button onclick="goBackToShop()">Back to Shop</button>
+  </div>
+
+  <script>
+    const username = sessionStorage.getItem('user') || "Guest";
+    const totalCarbon = localStorage.getItem('totalCarbon') || 0;
+    document.getElementById("user-name").innerText = username;
+    document.getElementById("total-carbon").innerText = parseFloat(totalCarbon).toFixed(2);
+
+    function goBackToShop() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
