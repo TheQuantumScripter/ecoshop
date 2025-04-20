@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoShop</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script>
+    // redirect to login if not logged in
+    if (!sessionStorage.getItem("user")) {
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">
+        EcoShop
+        <img src="assets/leaff.png" alt="Leaf Logo" class="logo-icon" />
+
+      </h1>
+      
+      <ul>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="product-list">
+      <div class="product-card">
+        <img src="assets/notebook.jpg" alt="Eco Notebook"/>
+        <h3>Eco Notebook</h3>
+        <p>Carbon Footprint: 1.2kg CO2</p>
+        <button onclick="addToCart('eco-notebook')">Add to Cart</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="assets/bottle.jpg" alt="Recycled Water Bottle"/>
+        <h3>Recycled Water Bottle</h3>
+        <p>Carbon Footprint: 2.0kg CO2</p>
+        <button onclick="addToCart('recycled-bottle')">Add to Cart</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="assets/toothbrush.jpg" alt="Bamboo Toothbrush"/>
+        <h3>Bamboo Toothbrush</h3>
+        <p>Carbon Footprint: 0.5kg CO2</p>
+        <button onclick="addToCart('bamboo-tooth')">Add to Cart</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="assets/light.jpg" alt="Solar Garden Light"/>
+        <h3>Solar Garden Light</h3>
+        <p>Carbon Footprint: 3.1kg CO2</p>
+        <button onclick="addToCart('solar-light')">Add to Cart</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="assets/bag.jpg" alt="Cotton Bag"/>
+        <h3>Organic Cotton Bag</h3>
+        <p>Carbon Footprint: 0.9kg CO2</p>
+        <button onclick="addToCart('cotton-bag')">Add to Cart</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="assets/pen.jpg" alt="Recycled Pen"/>
+        <h3>Recycled Pen Pack</h3>
+        <p>Carbon Footprint: 0.4kg CO2</p>
+        <button onclick="addToCart('eco-pen')">Add to Cart</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="assets/cup.jpg" alt="Reusable Cup"/>
+        <h3>Reusable Coffee Cup</h3>
+        <p>Carbon Footprint: 1.1kg CO2</p>
+        <button onclick="addToCart('eco-cup')">Add to Cart</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="assets/plant.jpg" alt="Plant Kit"/>
+        <h3>Indoor Plant Kit</h3>
+        <p>Carbon Footprint: 0.7kg CO2</p>
+        <button onclick="addToCart('plant-kit')">Add to Cart</button>
+      </div>
+    </section>
+    <footer class="mainfooter">
+      <p>EcoShop - Your Eco-Friendly Shopping Destination</p>
+      <p>Committed to Reducing Carbon Footprint</p>
+    </footer>
+    <footer class="coppyright"> 
+      <p>&copy; 2025 EcoShop. All rights reserved.</p>
+      <p>&copy; An E-com Website By Team "The Debuggers"</p>
+      <p> (Creators: Anushka Deshmukh , Saish Kulkarni , Abhishek Pagare) </p> </footer>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
